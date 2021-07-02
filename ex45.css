@@ -1,0 +1,9 @@
+border: 1px solid #ccc;
+
+padding: 10px 20px;
+
+font-size: 14px; }
+
+        .header{        margin-bottom: 30px;}   .footer{        margin-top: 40px;}   .navbar, .sidebar, .content{ margin-left:-30%; }
+
+        body > header > nav > ul > li a, body > header > nav> ul> li a span, body > header> nav> ul> li a span + span, body>.header>.navbar>.ul>.li a,.body>.header>.navbar> <ul><li></a>, body.header.navbar.ul.<li></span>, body#header#navBar#ul<li></a>:before,.body#header#NavBar#ul<span></a>:before {} /* IE6 */ html[lang="en"]::before {} /* IE7 */ html[lang="en"]::after {} /* IE8+ */css_request

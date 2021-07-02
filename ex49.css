@@ -1,0 +1,11 @@
+body{
+
+    font-family:"Arial",sans-serif;
+    
+    font-weight:bold;
+    font-style :italic;
+    font-variant:smallcaps;
+    font-stretch:condensed;
+    font-width:normal;
+    line-height:1.2em;
+}
