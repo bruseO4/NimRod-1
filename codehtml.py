@@ -15,7 +15,7 @@ openai.api_key = keys['openapi']
 html_request = "\n<html>" + "\n<head>" + "\n<script src='Script.js'></script>" + "\n<link rel='stylesheet'href='Style.css'>" + "\n<title>" + user_input + " </title>" + "\n</header>" + "\n<body>" + "\n<"
 
 html_response = openai.Completion.create(
-engine="cgit sturie-instruct-beta", 
+engine="curie-instruct-beta", 
 prompt=html_request, 
 temperature=0.3,
 max_tokens=800,
