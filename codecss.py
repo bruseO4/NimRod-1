@@ -33,17 +33,15 @@ print(css_request+response.choices[0].text)
 #python3 codecss.py
 
 
-
-"""
 css_request_1 = "body{" + "\n" + "\nbackgroundcolor:(100,"
 
 response_1 = openai.Completion.create(
 engine="curie-instruct-beta", 
-prompt=css_request1, 
+prompt=css_request, 
 temperature=0.3,
 max_tokens=800,
 top_p=1,
-best_of=1,""""""
+best_of=1,
 frequency_penalty=.9,
 presence_penalty=.5,
 logprobs=10,
@@ -112,5 +110,5 @@ logit_bias={
   
 },
 )
-css_code=css_request1 + response_1.choices[0].text
-"""
+css_code=css_request+response.choices[0].text
+print(css_code)
