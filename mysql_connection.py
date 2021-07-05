@@ -11,3 +11,9 @@ mydb = mysql.connector.connect(
 )
 
 print(mydb)
+
+# def save_date(request, response)
+#
+#
+#
+# return true
