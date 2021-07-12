@@ -1,6 +1,11 @@
+import mysql_connection
 import request
 
-response = request.openai_request("a website")
+user_input = input("Simply describe what you want to see in HTML:\n")
 
-#mysql_connection.save_data("a website",response)
-#print(response)
+response = request.openai_request(user_input)
+# python3 main.py
+
+mysql_connection.save_data(user_input, response)
+
+print(response)

@@ -1,0 +1,16 @@
+body{ 
+    font:Timesnewroman, Sans-Serif;
+    background-color:lightskyblue;
+    color:green;
+    text-align: center;
+    color:white;
+    
+}
+ul {
+    list-style-type: none;
+} 
+input {
+    background-color: lightsteelblue;
+    border-color:green;
+    color:white;
+}
