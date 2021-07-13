@@ -11,7 +11,7 @@ def openai_request(user_input):
     openai.api_key = keys['openapi']
 
     start_request = "\n<html>" + "\n<head>" + "\n<link rel='icon' href='1.ico' type='image/x-icon'/>" + "\n<title>" + user_input + "</title>\n" + \
-        "<script src='script.js'></script>\n" + "<style>\n" + "body{\n"
+        "<script src='script.js'></script>\n" + "<style>\n" + "<!--only make css-->\n" + "body{\n"
 
     response = openai.Completion.create(
         prompt=start_request,
@@ -50,6 +50,6 @@ def openai_request(user_input):
     html_code = css_code + "\n\n<!--This is where the html starts...-->\n\n" + \
         response2.choices[0].text + "\n </html>"
     html_code = html_code.lower()
-    # print(html_code)
+    print(html_code)
 
     return response.choices[0].text + response2.choices[0].text

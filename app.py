@@ -1,3 +1,4 @@
+import request 
 from flask import Flask, request, render_template
 app = Flask(__name__)
   
@@ -9,5 +10,7 @@ def my_form():
 @app.route('/', methods=['POST'])
 def my_form_post():
     variable = request.form['variable']
+    processed_text = variable.upper()
+    return processed_text
     
 
