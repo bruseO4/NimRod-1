@@ -4,13 +4,39 @@ body{
     color:green;
     text-align: center;
     color:white;
-    
+    font-size: 20px; 
+      
 }
+
+
+.button {
+    color:white;
+    background-color:green;
+    border-width: 2px; 
+    border-color: white;
+
+}
+
 ul {
     list-style-type: none;
-} 
-input {
-    background-color: lightsteelblue;
-    border-color:green;
-    color:white;
-}
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color:seagreen;
+  } 
+ 

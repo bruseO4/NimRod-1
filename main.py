@@ -5,7 +5,7 @@ import app
 import tup
 
 user_input = input("Simply describe what you want to see in HTML:\n")
-#user_input = app.my_form
+#user_input = app.my_form()
 
 response = request.openai_request(user_input)
 # python3 main.py
