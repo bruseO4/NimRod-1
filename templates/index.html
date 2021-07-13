@@ -7,7 +7,7 @@
         <title>Nimrod</title>
 
         <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
 
@@ -24,17 +24,13 @@
         <h1>Nimrod Website Generator</h1>
        
         <p>Generate a Website With Just a Sentence</p><br>
-        <form method="POST">
-            <input name="variable">
+        <form method="POST" action="/">
+            <input name="user_input">
             <input type="submit" id="button">
         </form>
         </div>
         <br>
-        <iframe id="inlineFrameExample"
-            title="Inline Frame Example"
-            width="1000"
-            height="500"
-            src="file:///Users/anthony/Documents/py-1/output.html">
+        {{api_response | safe}}
         </iframe>
     </body>
 
