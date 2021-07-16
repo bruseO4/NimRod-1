@@ -1,1 +1,4 @@
 keys.json
+__pycache__
+.vscode
+unsplash-dataset/

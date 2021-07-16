@@ -1,6 +1,6 @@
 body{ 
     font:Timesnewroman, Sans-Serif;
-    background-color:lightskyblue;
+    background-color:rgb(114, 216, 114);
     color:green;
     text-align: center;
     color:white;
@@ -8,35 +8,21 @@ body{
       
 }
 
-
-.button {
-    color:white;
-    background-color:green;
-    border-width: 2px; 
-    border-color: white;
-
-}
-
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
+    position: sticky; 
+    
   }
-  
-  li {
-    float: left;
-  }
-  
+
+
   li a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color:seagreen;
+    background-color:rgba(255, 255, 255, 0.25);
   } 
  

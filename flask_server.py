@@ -8,6 +8,11 @@ app = Flask(__name__, static_url_path='')
 def send_css(path):
     return send_from_directory('css', path)
 
+@app.route('/favicon/<path:path>')
+def send_favicon(path):
+    return send_from_directory('favicon', path)
+
+
 @app.route('/', methods=['GET', 'POST'])
 def root():
     api_response = ""
