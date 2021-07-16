@@ -7,30 +7,32 @@ from bs4 import BeautifulSoup
 import tup
 import mysql_connection
 import unsplash
+import uns
 
 
 def openai_request(user_input):
     with open('keys.json') as f:
         keys = json.load(f)
     openai.api_key = keys['openapi']
-    #photos=unsplash.search_unslash(user_input,unsplash.photo_features, unsplash.photo_ids, 1)
-    #photos=tup.convertTuple(photos)
+    #id1 = uns.uns(0)
+    #id2 = uns.uns(1)
+    #id3 = uns.uns(2)
     #start_request = "\n<html>" + "\n<head>" +  "\n<title>" + user_input + "</title>\n" + \
-        #"<script src='script.js'></script>\n" + "<img src='" + photos + "' alt='Girl in a jacket' width='500' height='600'>" + "<style>\n" + "<!--style only-->\n" + "body{\n"
+        #"<script src='script.js'></script>\n" + "<img src='https://unsplash.com/photos/" + id1 + "'alt='' width='' height=''>" + "<style>\n" + "<!--style only-->\n" + "body{\n"
 
     response = openai.Completion.create(
-        prompt= "#Text to HTML Code: \nText: a website for a pizza shop \n HTML code: \n<html> \n<head> \n<title> + user_input + </title>\n <script src='script.js'></script>\n <img src=”” photos alt='pizza' width='500' height='600'> <style>\n <!--style only-->\n body{\n <h1 style='color: #FDD7E3;font-family: sans-serif'>Welcome to Pizza Pie!</h1><br /> <p style='font-size:14px'><strong>We pride ourselves on fresh pizzas made with real ingredients in a cozy environment.</strong></p><br /> <img src ='http://www.pizzapieonline.com/' width ='233' height ='80'/> </body> </html>",
+        prompt= "Generate a website with a sentence ex. <head> <title> user_input </title> </head> <script src='script.js'></script> <img src='' photos alt='' width='' height=''> <style> body { background:blue; } </style> <!--html only--> </head> <body> </body> </html> ",
         engine=constant.ENGINE,
         max_tokens=constant.MAX_TOKENS,
         frequency_penalty=constant.FREQUENCY_PENALTY,
-        logit_bias=logit_bias_1.logit_bias_1,
+        #logit_bias=logit_bias_1.logit_bias_1,
         # logit_bias=logit_bias_1.logit_bias_1,
         presence_penalty=constant.PRESENCE_PENALTY,
         temperature=constant.TEMPERATURE,
         top_p=constant.TOP_P,
 
     )
-    response=tup.convertTuple(response) 
+   
     """
     response.choices[0].text
     css_code = start_request + \

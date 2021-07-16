@@ -6,8 +6,8 @@ import flask_server
 import unsplash
 from flask import request
 
-#user_input = input("Simply describe what you want to see in HTML:\n")
-user_input = flask_server.root()
+user_input = input("Simply describe what you want to see in HTML:\n")
+#user_input = flask_server.root()
 
 response = open_ai.openai_request(user_input)
 # python3 main.py

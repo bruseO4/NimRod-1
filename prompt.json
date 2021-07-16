@@ -1,14 +1,38 @@
 [
     {
         "prompt": "a website",
-        "completion": "\n<html> \n<head> \n<title> user_input </title>\n <script src='script.js'></script>\n <img src=”” photos alt='' width='500' height='600'> <style>\n <!--style only-->\n body{\n"
+        "completion": "<html> <head> <title> user_input </title> </head> <script src='script.js'></script> <img src='' photos alt='' width='500' height='600'> <style> <!--style only--> </style> <!--html only--> <body> </body> </html>"
     },
     {
         "prompt": "a website for a pizza shop",
         "completion": "\n<html> \n<head> \n<title> + user_input + </title>\n <script src='script.js'></script>\n <img src=”” photos alt='pizza' width='500' height='600'> <style>\n <!--style only-->\n body{\n <h1 style='color: #FDD7E3;font-family: sans-serif'>Welcome to Pizza Pie!</h1><br /> <p style='font-size:14px'><strong>We pride ourselves on fresh pizzas made with real ingredients in a cozy environment.</strong></p><br /> <img src ='http://www.pizzapieonline.com/' width ='233' height ='80'/> </body> </html>"
     },
     {
-        "prompt": "<prompt text>",
+        "prompt": "a website with a blue background",
+        "completion": "<html> <head> <title> user_input </title> </head> <script src='script.js'></script> <img src='' photos alt='' width='' height=''> <style>body { background:blue;} </style> <!--html only--> </head> <body> </body> </html>"
+    },
+    {
+        "prompt": "a website with a list of options", 
+        "completion": "<html> <head> <title> user_input </title> </head> <script src='script.js'></script> <img src='' photos alt='' width='' height=''> <style> body { font-family:Arial,Helvetica,sans-serif; margin-top: 20px; } </style> </head> <body> <button class='mybutton'>Button</button> <img src = 'images/banner1.png'/> <input> <ul> List of options</ul> <li option value= 'optionOne'>Option one</option> </li> <li option value= 'optionTwo'>Option two</option> </li> <li option value='optionThree'>Option three</option> </li> <li option value='optionFour'>Foo bar!</option> </li> <!-- end list --> </input> </body> </html>"
+    },
+    {
+        "prompt": "<prompt text>", 
+        "completion": "<ideal generated text>"
+    },
+    {
+        "prompt": "<prompt text>", 
+        "completion": "<ideal generated text>"
+    },
+    {
+        "prompt": "<prompt text>", 
+        "completion": "<ideal generated text>"
+    },
+    {
+        "prompt": "<prompt text>", 
+        "completion": "<ideal generated text>"
+    },
+    {
+        "prompt": "<prompt text>", 
         "completion": "<ideal generated text>"
     }
 ]
