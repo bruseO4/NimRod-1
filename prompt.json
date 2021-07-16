@@ -1,0 +1,14 @@
+[
+    {
+        "prompt": "a website",
+        "completion": "\n<html> \n<head> \n<title> user_input </title>\n <script src='script.js'></script>\n <img src=”” photos alt='' width='500' height='600'> <style>\n <!--style only-->\n body{\n"
+    },
+    {
+        "prompt": "a website for a pizza shop",
+        "completion": "\n<html> \n<head> \n<title> + user_input + </title>\n <script src='script.js'></script>\n <img src=”” photos alt='pizza' width='500' height='600'> <style>\n <!--style only-->\n body{\n <h1 style='color: #FDD7E3;font-family: sans-serif'>Welcome to Pizza Pie!</h1><br /> <p style='font-size:14px'><strong>We pride ourselves on fresh pizzas made with real ingredients in a cozy environment.</strong></p><br /> <img src ='http://www.pizzapieonline.com/' width ='233' height ='80'/> </body> </html>"
+    },
+    {
+        "prompt": "<prompt text>",
+        "completion": "<ideal generated text>"
+    }
+]

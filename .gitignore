@@ -2,3 +2,5 @@ keys.json
 __pycache__
 .vscode
 unsplash-dataset/
+.DS_Store
+unsplash-dataset/features.npy
