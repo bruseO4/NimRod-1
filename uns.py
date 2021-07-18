@@ -7,6 +7,7 @@ def uns(id):
             list_lines.append(line_list)
         
         
-    list_lines[id]
-uns(0)
+    #list_lines[id]
+    return list_lines[id]
+#uns(0)
 

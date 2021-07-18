@@ -1,5 +1,6 @@
 import constant
 import json
+import logit_bias_3
 import logit_bias_2
 import logit_bias_1
 import openai
@@ -10,29 +11,31 @@ import unsplash
 import uns
 
 
+
 def openai_request(user_input):
     with open('keys.json') as f:
         keys = json.load(f)
     openai.api_key = keys['openapi']
-    #id1 = uns.uns(0)
+    id1 = uns.uns(0)
     #id2 = uns.uns(1)
     #id3 = uns.uns(2)
-    #start_request = "\n<html>" + "\n<head>" +  "\n<title>" + user_input + "</title>\n" + \
-        #"<script src='script.js'></script>\n" + "<img src='https://unsplash.com/photos/" + id1 + "'alt='' width='' height=''>" + "<style>\n" + "<!--style only-->\n" + "body{\n"
+    #start_request = "\n<html>" + "\n<head>" +  "\n<title>" + user_input + "</title>\n" +  "<script src='script.js'></script>\n"  + "<style>\n" + "<!--style only-->\n" + "body{\n" + "background-image:<img src='https://unsplash.com/photos/" + id1 + "'alt='' width='' height=''>"
 
     response = openai.Completion.create(
-        prompt= "Generate a website with a sentence ex. <head> <title> user_input </title> </head> <script src='script.js'></script> <img src='' photos alt='' width='' height=''> <style> body { background:blue; } </style> <!--html only--> </head> <body> </body> </html> ",
+        prompt= "Website Generator, \n\n <html> <head> <title> </title> </head> <script src='script.js'></script> <img src='' photos alt='' width='500' height='600'> <style> <!--style only--> </style> <!--html only--> <body> </body> </html> " ,
+        #prompt= "\n<html>" + "\n<head>" +  "\n<title>" + user_input + "</title>\n" +  "<script src='script.js'></script>\n"  + "<style>\n" + "<!--style only-->\n" + "body{\n" + "background-image:<img src='https://unsplash.com/photos/" + id1 + "'alt='' width='' height=''>",
         engine=constant.ENGINE,
         max_tokens=constant.MAX_TOKENS,
         frequency_penalty=constant.FREQUENCY_PENALTY,
-        #logit_bias=logit_bias_1.logit_bias_1,
+        logit_bias=logit_bias_2.logit_bias_2,
         # logit_bias=logit_bias_1.logit_bias_1,
         presence_penalty=constant.PRESENCE_PENALTY,
         temperature=constant.TEMPERATURE,
         top_p=constant.TOP_P,
 
     )
-   
+    
+    return response.choices[0].text
     """
     response.choices[0].text
     css_code = start_request + \

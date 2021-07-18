@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from IPython.display import Image
 from IPython.core.display import HTML
-
+import flask_server
 
 # Load the open CLIP model
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -24,9 +24,9 @@ else:
     photo_features = torch.from_numpy(photo_features).to(device)
 
 # Print some statistics
-print(f"Photos loaded: {len(photo_ids)}")
-prompt= input("What do you want your images to be about?")
-
+#print(f"Photos loaded: {len(photo_ids)}")
+#prompt= input("What do you want your background image to be?\n")
+prompt=flask_server.root()
 
 def display_photo(photo_id):
     # Get the URL of the photo resized to have a width of 320px
