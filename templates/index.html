@@ -1,78 +1,93 @@
 <!doctype html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel='shortcut icon' href="/favicon/icon.png" type='image/png'/>
-        <title>Nimrod</title>
 
-        <!-- Load external CSS styles -->
-        <!--<link rel="stylesheet" href="file:///Users/anthony/Documents/py-1/css/style.css">-->
-        <style> 
-        body{ 
-    font:Timesnewroman, Sans-Serif;
-    background-color:rgb(114, 216, 114);
-    color:green;
-    text-align: center;
-    color:white;
-    font-size: 20px; 
-      
-}
+<head>
+    <meta charset="utf-8">
+    <link rel='shortcut icon' href="/favicon/icon.png" type='image/png' />
+    <title>Nimrod</title>
 
-ul {
-    list-style-type: none;
-    overflow: hidden;
-    position: sticky; 
-    
-  }
+    <!-- Load external CSS styles -->
+    <!--<link rel="stylesheet" href="file:///Users/anthony/Documents/py-1/css/style.css">-->
+    <style>
+        body {
+            font: Timesnewroman, Sans-Serif;
+            background-color: rgb(114, 216, 114);
+            color: green;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            position: sticky;
+
+        }
 
 
-  li a {
-    color: white;
-    text-decoration: none;
-    font-size:40px;
-    margin:15px;
-    padding:0px;
-  }
-  
-  li a:hover {
-    background-color:rgba(255, 255, 255, 0.25);
-  } 
- </style>
+        li a {
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            margin: 15px;
+            padding: 0px;
+        }
 
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
+        li a:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    </style>
 
-    </head>
+    <!-- Load external JavaScript -->
+    <script src="scripts.js"></script>
 
-    <body>
-        <div id="Home">
-            <ul id="right_list">
-                <li style="float:left"><a href="index.html"><img style="top:0" src='/favicon/nricon.png'width ='100' height='100'> </a></li>
-                <li style="float:left"><a href="contact.html">Contact Us</a></li>
-                <li style="float:right"><a href="pricing.html">Pricing</a></li>
-                <li style="float:right"><a href="mission.html">Our Mission</a></li>
-            </ul> 
-           
-            
-        <h1>Nimrod Website Generator</h1> 
-        
-       
+</head>
+
+<body>
+    <div id="Home">
+        <ul id="right_list">
+            <li style="float:left"><a href='/templates/index.html'><img style="top:0" src='/favicon/nricon.png' width='100'
+                        height='100'> </a></li>
+            <li style="float:left"><a href='/templates/contact.html'>Contact Us</a></li>
+            <li style="float:right"><a href='/templates/pricing.html'>Pricing</a></li>
+            <li style="float:right"><a href='/templates/mission.html'>Our Mission</a></li>
+        </ul>
+
+
+        <h1>Nimrod Website Generator</h1>
+
+
         <p>Generate a Website With Just a Sentence</p><br>
         <form method="POST" action="/" target="_blank">
             <input name="user_input">
-            <input type="submit" id="button"> 
-            <a href="/" ><button>Visit Your Website In A New Tab</button></a>
+            <input type="submit" id="button">
+            <a href="/"><button>Visit Your Website In A New Tab</button></a>
         </form>
-        </div>
-        <br>
-         <footer>
-            <a target="_blank" href="https://twitter.com/home?lang=en"><img src='/favicon/2.png'width ='50' height='50'></a>
-            <a target="_blank" href="https://twitter.com/nimrod576"><img src='/favicon/1.png'width ='50' height='50'></a>
-            <p style="font-size:10px; float:bottom"> Nimrod 2021 </p> 
-         </footer>
-    </body>
-        {{api_response | safe}}
+    </div>
+    <br>
+    <footer>
+        <a target="_blank" href="https://twitter.com/home?lang=en"><img src='/favicon/2.png' width='50' height='50'></a>
+        <a target="_blank" href="https://twitter.com/nimrod576"><img src='/favicon/1.png' width='50' height='50'></a>
+        <p style="font-size:10px; float:bottom"> Nimrod 2021 </p>
+    </footer>
+
+   Unsplash:
+    <br />
+    {{unsplash_results}}
+    <br />
+   
+    Open AI:
+    <br />
+    <iframe width='800px' hieght='800px' srcdoc=' {{unsplash_results}}'>
+    </iframe>
+    {{api_response|safe}}
+    <!---<iframe src="file//Users/anthony/Documents/py-1/output.html" height="200" width="300" title="Iframe Example"></iframe>-->
+</body>
+
+
+
 
 </html>
-

@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from IPython.display import Image
 from IPython.core.display import HTML
-import flask_server
+#import flask_server
 
 # Load the open CLIP model
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -26,7 +26,7 @@ else:
 # Print some statistics
 #print(f"Photos loaded: {len(photo_ids)}")
 #prompt= input("What do you want your background image to be?\n")
-prompt=flask_server.root()
+#prompt=flask_server.send_unsplashy()
 
 def display_photo(photo_id):
     # Get the URL of the photo resized to have a width of 320px
@@ -74,6 +74,12 @@ def search_unslash(search_query, photo_features, photo_ids, results_count=3):
         with open("photos.txt", "w", encoding = 'utf-8') as file:
             file.write(photo_id)
     
-    print()
+    #print()
 
-search_unslash(prompt, photo_features, photo_ids, 3)
+    return best_photo_ids
+
+def search_unsplash(prompt, results_count):
+
+    return search_unslash(prompt, photo_features, photo_ids, results_count)
+
+#search_unslash(prompt, photo_features, photo_ids, 3)
